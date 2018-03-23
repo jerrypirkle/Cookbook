@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # # -*- coding: utf-8 -*-
 """
-Function that implements the Luhn Algorithm, which is used to help validate credit card numbers
+Function that implements the Luhn Algorithm, which is used to help validate credit card numbers.
 Author: Jerry Pirkle
 Date Created: 3/25/18
 Python Version: 3.6.4
