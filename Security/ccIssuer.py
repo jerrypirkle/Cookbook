@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # # -*- coding: utf-8 -*-
 """
-Function to determine credit card provider
+Function to determine credit card provider.
 Author: Jerry Pirkle
 Date Created: 3/23/18
 Python Version: 3.6.4
