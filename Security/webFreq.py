@@ -11,7 +11,7 @@ from collections import Counter
 from urllib.request import urlopen
 
 
-target_url = r"https://raw.githubusercontent.com/teropa/nlp/master/resources/corpora/gutenberg/shakespeare-caesar.txt"
+target_url = #r"https://raw.githubusercontent.com/teropa/nlp/master/resources/corpora/gutenberg/shakespeare-caesar.txt"
 data = urlopen(target_url)
 
 
