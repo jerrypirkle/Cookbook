@@ -1,3 +1,7 @@
+# Wildcard group search
+Import-Module ActiveDirectory
+Get-ADGroup -Filter {Name -like '*SQL*'}  -Properties * | select -property SamAccountName,Name,Description,DistinguishedName,CanonicalName,GroupCategory,GroupScope,whenCreated
+
 # Given a list of groups in a file (adminlist.txt), get members of the group in csv format (output.csv)
 foreach ($service in get-content C:\Users\XXX\Documents\adminlist.txt) {
 	 Get-ADGroupMember -identity $service.Trim() -Recursive | Get-ADUser -Property * | Select DisplayName,EmployeeID,UserPrincipalName,Enabled,Name,ObjectClass,EmailAddress | Export-Csv -Append -Path "C:\Users\XXX\Documents\output.csv"
