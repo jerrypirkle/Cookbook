@@ -1,10 +1,4 @@
-# Given a list of groups in a file, get members of the group
-foreach ($service in get-content C:\Users\x\Documents\list.txt) {
-	echo $service >> C:\Users\x\Documents\output.txt
-	 Get-ADGroupMember -identity $service.Trim() -Recursive | Get-ADUser -Property DisplayName | Select Name,ObjectClass,DisplayName﻿  >> C:\Users\578903\Documents\output.txt
-}
-
-# Grab other properties for users that did not follow naming convention
-foreach ($service in get-content C:\Users\x\Documents\adminIds.txt) {
-	 Get-ADUser $service.Trim() | Select Name,GivenName,Surname >> C:\Users\578903\Documents\idOutput.txt
+# Given a list of groups in a file (adminlist.txt), get members of the group in csv format (output.csv)
+foreach ($service in get-content C:\Users\XXX\Documents\adminlist.txt) {
+	 Get-ADGroupMember -identity $service.Trim() -Recursive | Get-ADUser -Property * | Select DisplayName,EmployeeID,UserPrincipalName,Enabled,Name,ObjectClass,EmailAddress | Export-Csv -Append -Path "C:\Users\XXX\Documents\output.csv"
 }
