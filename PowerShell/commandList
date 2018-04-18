@@ -6,3 +6,7 @@ Get-ADGroup -Filter {Name -like '*SQL*'}  -Properties * | select -property SamAc
 foreach ($service in get-content C:\Users\XXX\Documents\adminlist.txt) {
 	 Get-ADGroupMember -identity $service.Trim() -Recursive | Get-ADUser -Property * | Select DisplayName,EmployeeID,UserPrincipalName,Enabled,Name,ObjectClass,EmailAddress | Export-Csv -Append -Path "C:\Users\XXX\Documents\output.csv"
 }
+
+# Multiple Parameters
+Import-Module ActiveDirectory
+Get-ADGroup -Filter {Name -like '*xxx*' -and SamAccountName -like '*xxx*'}  -Properties * | select -property Name,Description,SamAccountName,GroupCategory,GroupScope,whenCreated | Export-Csv -Append -Path "C:\Users\xxx\Documents\FullAdmin.csv"
