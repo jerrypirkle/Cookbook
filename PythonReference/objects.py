@@ -61,6 +61,11 @@ bailey.setBuddy(zipper)
 [Out]: Zipper is 6 year(s) old.
 
 '''
+str vs repr:
+__str__ will return a human readable string. __repr__ will return an internal representation.
+__repr__ can be invoked on an object by calling repr(obj) or by using backticks `obj`.
+When printing lists as well as other container classes, the contained elements will be printed using __repr__.
+
 References: 
 http://www.oodesign.com
 https://www.datacamp.com/community/tutorials/python-oop-tutorial
