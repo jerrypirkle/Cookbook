@@ -1,0 +1,2 @@
+# Execute a Python script from an interactive Python shell:
+exec(open('helloworld.py').read())
