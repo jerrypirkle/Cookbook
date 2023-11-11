@@ -3,7 +3,7 @@
 """
 The Barksdale Code is a simple transposition cipher that was used in the TV show The Wire.
 Rules: 'Jump to the other side of the 5 on the keypad, and swap 5's and 0's.'
-See: https://www.youtube.com/watch?v=DQBlq45c1T4
+See: https://www.youtube.com/watch?v=Eg7G3JLVjk0
 
 Author: Jerry Pirkle
 Date Created: 4/17/18
